@@ -33,4 +33,8 @@ public class Circle {
 	public static void setFilled(boolean filled) {
 		Circle.filled = filled;
 	}
+	
+	//HÜ: Neue Klasse Petrovic Circle vererbt von Circle mit zus. Attribut name
+	//S. 77 super (Aufruf von parent Konstruktoren)
+	
 }
