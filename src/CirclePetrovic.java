@@ -1,5 +1,5 @@
 public class CirclePetrovic extends Circle {
-	private static String name;
+	private String name;
 	
 	CirclePetrovic() {
 		this(1.0, false, "Petrovic");
@@ -14,13 +14,13 @@ public class CirclePetrovic extends Circle {
 		super(radius, filled);
 		setName(name);
 	}
-	public static String getName() {
+	public String getName() {
 		return name;
 	}
-	public static void setName(String name) {
-		CirclePetrovic.name = name;
+	public void setName(String name) {
+		this.name = name;
 		if (getName().length() < 1) {
-			CirclePetrovic.name = "Petrovic";
+			setName("Petrovic");
 		}
 	}
 }

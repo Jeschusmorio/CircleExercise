@@ -1,6 +1,6 @@
 public class Circle {
-	private static double radius;
-	private static boolean filled;
+	private double radius;
+	private boolean filled;
 	
 	Circle() {
 		this(1.0, false);
@@ -12,26 +12,26 @@ public class Circle {
 		setRadius(radius);
 		setFilled(filled);
 	}
-	public static double getCircumference(double radius) {
+	public double getCircumference(double radius) {
 		return 2 * SomeMaths.pi * radius;
 	}
-	public static double getArea(double radius) {
+	public double getArea(double radius) {
 		return SomeMaths.pi * SomeMaths.getSquared(radius);
 	}
-	public static double getRadius() {
+	public double getRadius() {
 		return radius;
 	}
-	public static void setRadius(double radius) {
-		Circle.radius = radius;
+	public void setRadius(double radius) {
+		this.radius = radius;
 		if (getRadius() < 1) {
-			Circle.radius = 1;		//set radius to default value 1
+			setRadius(1);		//set radius to default value 1
 		}
 	}
-	public static boolean getFilled() {
+	public boolean getFilled() {
 		return filled;
 	}
-	public static void setFilled(boolean filled) {
-		Circle.filled = filled;
+	public void setFilled(boolean filled) {
+		this.filled = filled;
 	}
 	
 	//HÜ: Neue Klasse Petrovic Circle vererbt von Circle mit zus. Attribut name
