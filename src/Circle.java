@@ -1,14 +1,15 @@
 public class Circle {
-	private double radius;
-	private boolean filled;
+	private double radius;	//hat standardm‰ﬂig den Wert null
+	private boolean filled;	//hat standardm‰ﬂig den Wert false
 	
-	Circle() {
+	//Default-Konstruktor
+	public Circle() {
 		this(1.0, false);
 	}
-	Circle(double radius) {
+	public Circle(double radius) {
 		this(radius, false);
 	}
-	Circle(double radius, boolean filled) {
+	public Circle(double radius, boolean filled) {
 		setRadius(radius);
 		setFilled(filled);
 	}
@@ -22,9 +23,12 @@ public class Circle {
 		return radius;
 	}
 	public void setRadius(double radius) {
-		this.radius = radius;
-		if (getRadius() < 1) {
-			setRadius(1);		//set radius to default value 1
+		if (radius < 1) {
+			System.out.println("Radius muss mindestens den Wert 1 besitzen!");
+			setRadius(1.0);		//set radius to default value 1
+		}
+		else {
+			this.radius = radius;
 		}
 	}
 	public boolean getFilled() {

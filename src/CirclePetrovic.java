@@ -1,16 +1,20 @@
 public class CirclePetrovic extends Circle {
 	private String name;
 	
-	CirclePetrovic() {
+	//Default Konstruktor
+	public CirclePetrovic() {
 		this(1.0, false, "Petrovic");
 	}
-	CirclePetrovic(double radius) {
+	public CirclePetrovic(String name) {
+		this(1.0, false, name);
+	}
+	public CirclePetrovic(double radius) {
 		this(radius, false, "Petrovic");
 	}
-	CirclePetrovic(double radius, boolean filled) {
+	public CirclePetrovic(double radius, boolean filled) {
 		this(radius, filled, "Petrovic");
 	}
-	CirclePetrovic(double radius, boolean filled, String name) {
+	public CirclePetrovic(double radius, boolean filled, String name) {
 		super(radius, filled);
 		setName(name);
 	}
@@ -18,9 +22,12 @@ public class CirclePetrovic extends Circle {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
-		if (getName().length() < 1) {
+		if (name.length() < 1) {
+			System.out.println("Der Name darf nicht leer sein!");
 			setName("Petrovic");
+		} 
+		else {
+			this.name = name;
 		}
 	}
 }
