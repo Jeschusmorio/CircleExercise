@@ -37,8 +37,12 @@ public class Circle {
 	public void setFilled(boolean filled) {
 		this.filled = filled;
 	}
-	
-	//HÜ: Neue Klasse Petrovic Circle vererbt von Circle mit zus. Attribut name
-	//S. 77 super (Aufruf von parent Konstruktoren)
-	
+	public void output(boolean filled) {
+		if (filled) {
+			System.out.println("Flaeche: "+getArea(getRadius())+"\n");
+		}
+		else {
+			System.out.println("Umfang: "+getCircumference(getRadius())+"\n");
+		}
+	}
 }
