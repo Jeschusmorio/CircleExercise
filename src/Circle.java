@@ -37,12 +37,17 @@ public class Circle {
 	public void setFilled(boolean filled) {
 		this.filled = filled;
 	}
-	public void output(boolean filled) {
+	public void outputAreaOrCircumference(boolean filled) {
 		if (filled) {
 			System.out.println("Flaeche: "+getArea(getRadius())+"\n");
 		}
 		else {
 			System.out.println("Umfang: "+getCircumference(getRadius())+"\n");
 		}
+	}
+	public void output() {
+		System.out.println("Radius: "+getRadius());
+		outputAreaOrCircumference(getFilled());
+		System.out.println("=======================\n");
 	}
 }

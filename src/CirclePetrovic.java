@@ -31,12 +31,17 @@ public class CirclePetrovic extends Circle {
 		}*/
 		this.name = name;
 	}
-	public String output(String name) {
-		if (getName() == "") {
+	public String outputName(String name) {
+		if (name == "") {
 			return "Kreis";
 		}
 		else {
 			return this.name;
 		}
+	}
+	public void output() {
+		String cName = outputName(this.name);
+		System.out.println("Name: "+cName);
+		super.output();
 	}
 }
